@@ -1,0 +1,99 @@
+<!-- Content - right
+ ================================================== -->
+<div class=" col-sm-8 col-sm-push-4 col-lg-9 col-lg-push-3">
+	<h3> Заказать рубашку:</h3>				
+		<div class="panel panel-default panel-body">
+			<div class="panel-group" >
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="headingTwo">
+						<h4 class="panel-title">
+								<a routerLink = "/collection"> 
+								Выбрать рубашку из коллекции
+							</a>
+						</h4>
+					</div>
+				</div>
+			</div>
+			<div class="panel-group" >
+				<div class="panel panel-default ">
+					<div class="panel-heading" >
+						<h4 class="panel-title newshirt">
+						<a>
+							Создать собственную рубашку
+						</a>
+						</h4>
+					</div>
+		
+						<div class = "row sort">
+							<div class = "col-sm-2" >
+								<div class = "row">
+									<div class="form-group">
+										<h6>Цвет</h6>
+											<select class="form-control" name="color" [(ngModel)]="shirt.color" #color="ngModel">
+												<option *ngFor="let color of colores" [value]="color.value" >  
+													{{color.display}}
+												</option>
+											</select>
+									</div>
+								</div>
+							</div>
+							<div class = "col-sm-2" >
+								<div class = "row">
+									<div class="form-group">
+										<h6>Фактура</h6>
+											<select class="form-control" name="texture" [(ngModel)]="shirt.texture" #texture="ngModel">
+												<option *ngFor="let texture of textures" [value]="texture.value" >  
+													{{texture.display}}
+												</option>
+											</select>
+									</div>
+								</div>
+							</div>
+							<div class = "col-sm-3" >
+								<div class = "row">
+									<div class="form-group">
+										<h6>Силуэт</h6>
+										<select class="form-control" name="style" [(ngModel)]="shirt.style" #style="ngModel">
+											<option *ngFor="let style of styles" [value]="style.value" >  
+												{{style.display}}
+											</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class = "col-sm-3" >
+								<div class = "row">
+									<div class="form-group">
+										<h6>Воротник</h6>
+											<select class="form-control" name="collar" [(ngModel)]="shirt.collar" #collar="ngModel">
+												<option *ngFor="let collar of collares" [value]="collar.value" >  
+													{{collar.display}}
+												</option>
+											</select> 
+									</div>
+									</div>
+								</div>
+							<div class = "col-sm-2" >
+								<div class = "row">
+									<div class="form-group">
+										<h6>Рукав</h6>
+											<select class="form-control" name="sleeve" [(ngModel)]="shirt.sleeve" #sleeve="ngModel" >
+												<option *ngFor="let sleeve of sleeves" [value]="sleeve.value" >  
+													{{sleeve.display}}
+												</option>
+											</select> 
+									</div>
+								</div>
+							</div>
+						</div><!--row-->
+			
+					<div class = "row sort">
+						<button type="submit"  class="btn btn-warning" [disabled]="!(shirt.sleeve&&shirt.color&&shirt.texture&&shirt.style&&shirt.collar)" (click)= "addItem($event)" >Добавить в корзину</button>
+					</div>
+				</div><!--panel-default-->
+			</div><!--panel-group-->
+			
+	</div><!--panel-body-->
+
+	
+</div><!-- /content-right -->	

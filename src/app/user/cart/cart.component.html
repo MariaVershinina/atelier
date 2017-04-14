@@ -1,0 +1,28 @@
+<div class=" col-sm-8 col-sm-push-4 col-lg-9 col-lg-push-3">
+<h3> Корзина</h3>					
+<div class="panel panel-default panel-body">
+	<app-itemcart  *ngFor="let order of cart " [order]=order (warning)="warn($event)" ></app-itemcart>		
+	<h6 *ngIf="message">Вы успешно приобрели товар! <a routerLink = "/user/myitems">Перейти к списку покупок</a></h6>
+	<h6 *ngIf="cart.length == 0 && !message"> <p>Корзина пуста</p></h6>	
+ 	<button type="submit" class="btn btn-default" [disabled]="cart.length == 0||warning" data-toggle="modal"  data-target="#ModalQuestion">Приобрести товар</button>
+	<button type="submit" class="btn btn-default" [disabled]="cart.length == 0"  (click)= "clearItem($event)" > Очистить корзину</button>
+	<div [hidden]="!warning" class="alert alert-warning">Имеются несохраненные изменения</div> 					
+</div>
+
+	<div class="modals">
+		<div class="modal fade" id="ModalQuestion">
+			<div class="modal-dialog">
+				<form class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Вы хотите приобрести товар?</h4>
+					</div>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-default" data-dismiss="modal"     (click)= "buyItem($event)">Да</button>
+						<button type="submit" class="btn btn-default " data-dismiss="modal" >Нет</button>
+					</div>
+				</form><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	</div>
+</div>

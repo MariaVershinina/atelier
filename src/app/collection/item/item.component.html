@@ -1,0 +1,13 @@
+<div class="col-md-3 col-xs-6 item " >
+      <img class="img-responsive" src={{item.imageURL}} alt="Alt">
+      <h4>{{item.name}}</h4>
+      <ul class="list-group">
+        <li> Цвет: {{item.color}}</li>
+        <li> Фактура: {{item.texture}}</li>
+        <li> Силуэт: {{item.style}}</li>
+        <li> Воротник: {{item.collar}}</li>
+        <li> Рукав: {{item.sleeve}}</li>
+      </ul>
+      <button type="submit" *ngIf="currentuser" class="btn btn-warning" (click)= "addItem($event)">Добавить в корзину</button>
+</div>
+ 

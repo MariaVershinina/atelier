@@ -1,0 +1,70 @@
+<div class=" col-sm-8 col-sm-push-4 col-lg-9 col-lg-push-3">
+	<h3> Мои данные:</h3>				
+		<div class="panel panel-default panel-body">
+			<div class = "row sort">
+				<div class = "col-sm-4" >
+        	<div class="form-group">
+          	<h5><small>Имя</small></h5>
+            <input class="form-control h6"  [(ngModel)]="user.name"  [disabled]="!data" >
+					</div>
+        </div>
+      	<div class = "col-sm-4" >
+        	<div class="form-group">
+          	<h5><small>Фамилия</small></h5>
+            <input class="form-control h6"   [(ngModel)]="user.surname"  [disabled]="!data" >
+					</div>
+        </div>
+				<div class = "col-sm-4" >
+        	<div class="form-group">
+          	<h5><small>Пароль</small></h5>
+						<input class="form-control h6"   [(ngModel)]="user.password"  [disabled]="!data" >
+					</div>
+        </div>               
+      </div><!--row-->
+				<button type="submit" class="btn btn-warning" *ngIf="!data"    (click)="data=!data" >Изменить</button>
+				<button type="submit" class="btn btn-warning" *ngIf="data" (click)="changeData($event.target)" >Сохранить изменения</button>
+		</div>
+
+		<h3> Мои размеры:</h3>		
+		<div class="panel panel-default panel-body">
+			<div class = "row sort">
+				<div class = "col-sm-2" >
+        	<div class="form-group">
+          	<h5><small>Обхват шеи</small></h5>
+            <input class="form-control h6"  [(ngModel)]="user.neck" #neck="ngModel" [disabled]="!size" required pattern="[0-9]{2,3}" >
+					</div>
+        </div>
+				<div class = "col-sm-2" >
+        	<div class="form-group">
+          	<h5><small>Обхват груди</small></h5>
+            <input class="form-control h6"  [(ngModel)]="user.chest" #chest="ngModel"  [disabled]="!size" required pattern="[0-9]{2,3}" >
+					</div>
+        </div>
+				<div class = "col-sm-2" >
+        	<div class="form-group">
+          	<h5><small>Обхват талии</small></h5>
+           <input class="form-control h6"  [(ngModel)]="user.thigh" #thigh="ngModel" [disabled]="!size" required pattern="[0-9]{2,3}">
+					</div>
+        </div>
+				<div class = "col-sm-2" >
+        	<div class="form-group">
+          	<h5><small>Обхват бицепса</small></h5>
+            <input class="form-control h6"  [(ngModel)]="user.biceps" #biceps="ngModel" [disabled]="!size" required pattern="[0-9]{2,3}" >
+					</div>
+        </div>
+				<div class = "col-sm-2" >
+        	<div class="form-group">
+          	<h5><small>Обхват запястья</small></h5>
+            <input class="form-control h6"  [(ngModel)]="user.wrist" #wrist="ngModel" [disabled]="!size" required pattern="[0-9]{2,3}">
+					</div>
+        </div>		
+      	               
+      </div><!--row-->
+			<button type="submit" class="btn btn-warning" *ngIf="!size"  (click)="size=!size" >Изменить</button>
+			<button type="submit" class="btn btn-warning" *ngIf="size" [disabled]="neck.invalid||chest.invalid||thigh.invalid||biceps.invalid||wrist.invalid" (click)="changeSize($event.target)" >Сохранить изменения</button>
+			<div [hidden]="!(neck.invalid||chest.invalid||thigh.invalid||biceps.invalid||wrist.invalid)" class="alert alert-warning">
+          Введены некорректные данные
+      </div> 		
+		</div>
+	</div>
+	

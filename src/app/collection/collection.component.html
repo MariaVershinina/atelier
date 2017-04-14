@@ -1,0 +1,117 @@
+<div class="module">
+  <h1>Коллекция рубашек </h1>
+</div>
+<div class="container">
+  <div class= "row">	
+    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingTwo">
+				  <h4 class="panel-title">
+					  <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+						    Сортировать коллекцию
+						</a>
+					</h4>
+				</div>
+        <div aria-expanded="true" id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+				  <div class="list-group">
+             <div class="list-group-item">
+                <div class = "row sort">
+								    <div class = "col-sm-2" >
+                      <div class = "row">
+                           <div class="form-group">
+                             <h6>Цвет</h6>
+                              <select class="form-control" name="color"  [(ngModel)]="sortObject.color" #color="ngModel" >
+                                 <option *ngFor="let color of colores" [value]="color.value" >  
+                                    {{color.display}}
+                                 </option>
+                               </select>
+                          </div>
+                        </div>
+                       </div>
+                       <div class = "col-sm-2" >
+                         <div class = "row">
+                           <div class="form-group">
+                             <h6>Фактура</h6>
+                              <select class="form-control" name="texture" [(ngModel)]="sortObject.texture" #texture="ngModel">
+                                 <option *ngFor="let texture of textures" [value]="texture.value" >  
+                                    {{texture.display}}
+                                 </option>
+                              </select>
+                          </div>
+                        </div>
+                       </div>
+                       <div class = "col-sm-2" >
+                         <div class = "row">
+                           <div class="form-group">
+                             <h6>Силуэт</h6>
+                             <select class="form-control" name="style"  [(ngModel)]="sortObject.style" #style="ngModel">
+                                 <option *ngFor="let style of styles" [(value)]="style.value" >  
+                                    {{style.display}}
+                                 </option>
+                              </select>
+                          </div>
+                        </div>
+                       </div>
+                       <div class = "col-sm-2" >
+                         <div class = "row">
+                           <div class="form-group">
+                             <h6>Воротник</h6>
+                              <select class="form-control" name="collar"[(ngModel)]="sortObject.collar" #collar="ngModel">
+                                 <option *ngFor="let collar of collares" [value]="collar.value" >  
+                                    {{collar.display}}
+                                 </option>
+                              </select> 
+                          </div>
+                        </div>
+                       </div>
+                        <div class = "col-sm-2" >
+                         <div class = "row">
+                           <div class="form-group">
+                             <h6>Рукав</h6>
+                                <select class="form-control" name="sleeve" [(ngModel)]="sortObject.sleeve" #sleeve="ngModel">
+                                 <option *ngFor="let sleeve of sleeves" [value]="sleeve.value" >  
+                                    {{sleeve.display}}
+                                 </option>
+                              </select> 
+                          </div>
+                        </div>
+                       </div>
+                        <div class = "col-sm-2" >
+                         <div class = "row">
+                          <div class="form-group">
+                             <h6>Название</h6>
+                                <select class="form-control" name="name" [(ngModel)]="sortObject.name" [value]="name"#name="ngModel">
+                                 <option *ngFor="let name of names" [value]="name" >  
+                                    {{name}}
+                                 </option>
+                              </select> 
+                          </div>
+                        </div>
+                       </div>
+                   </div>
+                </div><!--item-->
+					    </div><!--list-group-->
+              <div class="panel panel-default">
+				        <div class="panel-heading" role="tab" id="headingTwo">
+				          <h4 class="panel-title">
+					          <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" (click)="reset()">
+						          Сбросить фильтр
+						        </a>
+					       </h4>
+				      </div>	
+			      </div><!--pannel-default-->	
+	    	  </div><!--pannel-collapse-->
+        </div><!--pannel-group-->
+      </div><!--row-->
+      <div class="row">
+        <app-item     *ngFor="let item of collection | sort:sortObject  "
+              [item]=item ></app-item>
+      
+     </div>
+</div>
+        
+
+				
+		
+			
+		

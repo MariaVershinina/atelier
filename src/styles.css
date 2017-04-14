@@ -1,0 +1,186 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 10vh;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    line-height: 1;
+    
+    font-family: "Playfair Display",sans-serif;
+    text-align: center;
+    color:black;
+  }
+h1,.h1{
+font-size: 8vmin;
+
+}
+h2,.h2{
+font-size: 7vmin;
+}
+h3,.h3{
+font-size: 6vmin;
+}
+h4,.h4{
+font-size: 5vmin;
+}
+h5,.h5{
+font-size: 4vmin;
+}
+h6,.h6{
+font-size: 3vmin;
+}
+.grey{
+   color: #848484;
+}
+p{
+    margin-top: 5px;
+    color: #848484;
+    font-family: 'PT Serif', serif;
+    font-size:1em;
+}
+ul{
+     list-style-type: none; 
+}
+a,.a{
+    margin-top: 5px;
+    color: #848484;
+    font-family: 'PT Serif', serif;
+    font-size:1em;
+}
+a:hover{
+   color: inherit;
+}
+
+
+.navbar-brand{
+     padding-top: 5px;
+     padding-left:50px;
+}
+.phone{
+    font-family: 'PT Serif', serif;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+    font-size:1.5em;
+    padding-top: 5px;
+    padding-left:50px;
+}
+.carousel {
+  height: 400px ;
+  overflow: hidden;
+  width:100%;
+  margin-bottom:20px;
+
+}
+.message{  height: 200px !important;}
+.gift{
+    margin-top:20px;
+}
+.carousel-caption h1, .module h1{
+  color:white;
+ }
+.carousel-inner {
+  overflow: visible;
+}
+.carousel-inner img , .carousel-caption{
+  left: 50%;
+  max-width: none !important;
+  min-height: 500px;
+  width: 100%;
+  position: absolute;
+  top: 300px;
+  transform: translate(-50%,-50%);
+ }
+ .carousel-control.right, .carousel-control.left {
+     background-image: none;
+ }
+ .margin{
+     margin-top:40px;
+     margin-bottom:40px;
+  
+ }
+ .info{
+      height: 200px !important;
+ }
+.ben {
+    text-align: center;
+}
+.module{
+    background-image: url("assets/img/pages/shirt.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding:50px;
+
+}
+.text{
+      height: 200px !important; 
+}
+.list-group-item span {
+    font-size: 3vmin;
+}
+.list-group-item label {
+    font-size: 3vmin;
+    font-weight: italic;
+}
+.list-group li {
+     border-radius: 4px;
+    -webkit-box-shadow: 0 0px 0px;
+    box-shadow: 0 0px;
+    padding-left:20px;
+    margin: 2px;
+    letter-spacing: 1px;
+    line-height: 1;
+    list-style-type: none; 
+    font-family: "Playfair Display",sans-serif;
+    font-size: 2vmin;
+    color: #848484;
+}
+.list-group li a{
+   font-family: "Playfair Display",sans-serif;  
+}
+
+.sort{
+    padding: 10px 15px
+}
+.form-group{
+  padding: 10px;
+}
+.navbar-nav>li .login{
+    float:right
+}
+.box{
+    margin-top:20px;
+}
+.form control .cart{
+    padding:6px 6px;
+}
+.newshirt a:hover  {
+ text-decoration: none;
+}
+.form-group {
+    margin-bottom: 0px;
+}
+.btn-warning{
+  margin-left:10px;
+}
+.alert{
+    padding:10px;
+    margin:10px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh; /*высота футера будет зависеть от высоты экрана*/
+}
+.padding{
+   padding:0px; 
+}

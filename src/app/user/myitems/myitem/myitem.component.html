@@ -1,0 +1,29 @@
+<div class="panel panel-default panel-body">
+  <div class = "row sort">
+	  <div class="col-md-3 col-xs-6 "   >
+      <img class="img-responsive" src={{order.shirt.imageURL}} alt="Alt">
+    </div>
+    <div class = "col-sm-3 order" >
+         <h6>Заказ</h6>
+         <p> № :{{order.id}}</p>
+         <p> Дата: {{order.date|date}}</p>
+     </div>
+		 <div class = "col-sm-3 order" >
+          <h6>Рубашка</h6>
+          <p> Название: {{order.shirt.name}}</p>
+          <p> Цвет: {{order.shirt.color}}</p>
+          <p> Фактура: {{order.shirt.texture}}</p>
+          <p> Силуэт:{{order.shirt.style}}</p>
+          <p> Воротник:{{order.shirt.collar}}</p>
+          <p> Рукав: {{order.shirt.sleeve}}</p>
+      </div> 
+      <div class = "col-sm-3 order" >
+          <h6>Размер</h6>
+          <p> Обхват шеи: {{order.neck}}</p>
+          <p> Обхват груди {{order.chest}}</p>
+          <p> Обхват талии {{order.thigh}}</p>
+          <p> Обхват бицепса {{order.biceps}}</p>
+          <p> Обхват запястья {{order.wrist}}</p>
+      </div>           
+   </div><!--row-->
+</div>

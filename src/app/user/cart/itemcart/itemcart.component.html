@@ -1,0 +1,101 @@
+<div class="panel panel-default panel-body">
+	<div class="col-md-3 col-xs-6 item">
+      <img class="img-responsive" src={{order.shirt.imageURL}} alt="Alt">
+    	<h4>{{order.shirt.name}}</h4>
+    </div>
+ 	<div class="col-md-9 col-xs-6 item" > 
+		<div class = "row ">
+			<div class = "col-sm-2" >
+				<div class = "row">
+					<div class="form-group">
+						<h6>Цвет</h6>
+						<h6><small>{{order.shirt.color}}</small></h6>
+					</div>
+				</div>
+			</div>
+			<div class = "col-sm-2" >
+				<div class = "row">
+					<div class="form-group">
+						<h6>Фактура</h6>
+						<h6><small>{{order.shirt.texture}}</small></h6>
+					</div>
+				</div>
+			</div>
+			<div class = "col-sm-3" >
+				<div class = "row">
+					<div class="form-group">
+						<h6>Силуэт</h6>
+						<h6><small>{{order.shirt.style}}</small></h6>
+					</div>
+				</div>
+			</div>
+			<div class = "col-sm-3" >
+				<div class = "row">
+					<div class="form-group">
+						<h6>Воротник</h6>
+						<h6><small>{{order.shirt.collar}}</small></h6>
+					</div>
+					</div>
+				</div>
+			<div class = "col-sm-2" >
+				<div class = "row">
+					<div class="form-group">
+						<h6>Рукав</h6>
+						<h6><small>{{order.shirt.sleeve}}</small></h6>
+					</div>
+				</div>
+			</div>
+		</div><!--row-->
+		<div class = "row">
+			<div class = "col-sm-2" >
+            	<div class = "row">
+					<div class="form-group">
+						<h6>Обхват<br> шеи</h6>
+							<input class="form-control h6"  [(ngModel)]="order.neck"  [disabled]="!size" #neck="ngModel" required pattern="[0-9]{2,3}" />
+					</div>
+				</div>
+			</div>
+			<div class = "col-sm-2" >
+				<div class = "row">
+					<div class="form-group">
+						<h6>Обхват груди</h6>
+							<input class="form-control h6"  [(ngModel)]="order.chest"  [disabled]="!size" #chest="ngModel" required pattern="[0-9]{2,3}" >
+					</div>
+				</div>
+			</div>
+			<div class = "col-sm-2" >
+				<div class = "row">
+					<div class="form-group">
+						<h6>Обхват <br>талии</h6>
+							<input class="form-control h6"  [(ngModel)]="order.thigh"  [disabled]="!size" #thigh="ngModel" required pattern="[0-9]{2,3}" >
+					</div>
+				</div>
+			</div>
+			<div class = "col-sm-2" >
+				<div class = "row">
+					<div class="form-group">
+						<h6>Обхват <br> бицепса</h6>
+							<input class="form-control h6"  [(ngModel)]="order.biceps"  [disabled]="!size" #biceps="ngModel" required pattern="[0-9]{2,3}" >
+					</div>
+					</div>
+				</div>
+			<div class = "col-sm-2" >
+				<div class = "row">
+					<div class="form-group">
+						<h6>Обхват <br> запястья</h6>
+							<input class="form-control h6"  [(ngModel)]="order.wrist"  [disabled]="!size" #wrist="ngModel" required pattern="[0-9]{2,3}" >
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class = "row ">
+    	<button type="submit" class="btn btn-warning" *ngIf="!size"  (click)="change()" >Изменить</button>
+		<button type="submit" class="btn btn-warning" *ngIf="size" [disabled]="neck.invalid||chest.invalid||thigh.invalid||biceps.invalid||wrist.invalid" (click)="changeSize($event.target)" >Сохранить изменения</button>
+		<button type="submit" class="btn btn-warning" (click)= "deleteCart($event)">Удалить из корзины</button>
+		<div [hidden]="!(neck.invalid||chest.invalid||thigh.invalid||biceps.invalid||wrist.invalid)" class="alert alert-warning">
+                Введены некорректные данные
+		</div> 					
+	</div><!--row-->
+</div>
+</div>
+
