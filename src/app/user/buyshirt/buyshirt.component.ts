@@ -39,7 +39,7 @@ export class BuyshirtComponent implements OnInit {
  
    public addItem(e){
     this.shirt.id = Date.now().toString();
-    this.shirt.imageURL="../../../assets/img/shirt/default.png";
+    this.shirt.imageURL="assets/img/shirt/default.png";
     this._addService.addInCart(this.shirt);
     this.shirt = new Shirt;
     }
