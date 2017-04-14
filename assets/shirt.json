@@ -1,0 +1,121 @@
+[{ 
+  "id": "1",
+  "name": "Blue Stripe", 
+  "color": "белый",
+  "texture":"полоска",
+  "style":"стандартный",
+  "collar": "итальянский", 
+  "sleeve":"длинный",
+  "imageURL":"assets/img/shirt/blue_stripe.png"
+},
+{ 
+  "id": "2",
+  "name": "Cloud", 
+  "color": "голубой",
+  "texture":"однотонная",
+  "style":"стандартный",
+  "collar": "классический", 
+  "sleeve":"длинный",
+  "imageURL":"assets/img/shirt/cloud.png"
+},
+{ 
+  "id": "3",
+  "name": "Crimson", 
+  "color": "белый",
+  "texture":"однотонная",
+  "style":"приталенный",
+  "collar": "итальянский", 
+  "sleeve":"короткий",
+  "imageURL":"assets/img/shirt/crimson.png"
+},
+{ 
+  "id": "4",
+  "name": "White Rabbit", 
+  "color": "белый",
+  "texture":"однотонная",
+  "style":"стандартный",
+  "collar": "классический", 
+  "sleeve":"длинный",
+  "imageURL":"assets/img/shirt/white_rabbit.png"
+},
+{ 
+  "id": "5",
+  "name": "January Day", 
+  "color": "белый",
+  "texture":"паттерн",
+  "style":"приталенный",
+  "collar": "итальянский", 
+  "sleeve":"короткий",
+  "imageURL":"assets/img/shirt/january_day.png"
+},
+{ 
+  "id": "6",
+  "name": "Oldlace", 
+  "color": "белый",
+  "texture":"однотонная",
+  "style":"приталенный",
+  "collar": "классический", 
+  "sleeve":"короткий",
+  "imageURL":"assets/img/shirt/oldlace.png"
+},
+{ 
+  "id": "7",
+  "name": "Paisley", 
+  "color": "белый",
+  "texture":"однотонная",
+  "style":"приталенный",
+  "collar": "классический", 
+  "sleeve":"короткий",
+  "imageURL":"assets/img/shirt/paisley.png"
+},
+{ 
+  "id": "8",
+  "name": "Pink Stripe", 
+  "color": "красный",
+  "texture":"полоска",
+  "style":"приталенный",
+  "collar": "классический", 
+  "sleeve":"длинный",
+  "imageURL":"assets/img/shirt/pink_stripe.png"
+},
+{ 
+  "id": "9",
+  "name": "Polka Dot", 
+  "color": "голубой",
+  "texture":"паттерн",
+  "style":"стандартный",
+  "collar": "классический", 
+  "sleeve":"длинный",
+  "imageURL":"assets/img/shirt/polka_dot.png"
+},
+{ 
+  "id": "10",
+  "name": "Snow at Night", 
+  "color": "серый",
+  "texture":"паттерн",
+  "style":"приталенный",
+  "collar": "классический", 
+  "sleeve":"длинный",
+  "imageURL":"assets/img/shirt/snow_at_night.png"
+},
+{ 
+  "id": "11",
+  "name": "Vishy", 
+  "color": "белый",
+  "texture":"клетка",
+  "style":"стандартный",
+  "collar": "итальянский", 
+  "sleeve":"короткий",
+  "imageURL":"assets/img/shirt/vishy.png"
+},
+{ 
+  "id": "4",
+  "name": "Honeydew", 
+  "color": "белый",
+  "texture":"клетка",
+  "style":"стандартный",
+  "collar": "итальянский", 
+  "sleeve":"короткий",
+  "imageURL":"assets/img/shirt/honeydew.png"
+}
+]
